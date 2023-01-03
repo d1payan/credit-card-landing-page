@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Manrope', sans-serif;
+}
+
+body {
+	background-color: #151515;
+	color: #ffffff;
+	max-width: 1440px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+/* Navbar Section */
+
+nav {
+	height: 15vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+
+.nav-middle ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	gap: 3rem;
+}
+
+.nav-right ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.nav-right ul li:first-child {
+	padding-right: 3.5rem;
+}
+
+.drop-down {
+	padding-left: 0.5rem;
+}
+
+.nav-right ul li img {
+	position: absolute;
+	margin-left: -1rem;
+	z-index: -1;
+}
+
+/* Media queries for Tablets */
+
+@media (max-width: 1023px) {
+	nav {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.nav-middle ul {
+		gap: 1.5rem;
+	}
+}
+
+/* Media queries for Mobiles */
+
+@media (max-width: 767px) {
+	nav {
+		margin: 2rem 0;
+	}
+}
+
+/* Hero Section */
+
+.hero-img {
+	display: flex;
+	justify-content: flex-end;
+	transform: translateX(15rem);
+}
+
+.backcard {
+	position: absolute;
+	right: 13rem;
+	top: -5rem;
+	z-index: -1;
+	width: 50%;
+}
+
+.frontcard {
+	position: absolute;
+	top: -1.5rem;
+	z-index: 1;
+	width: 60%;
+}
