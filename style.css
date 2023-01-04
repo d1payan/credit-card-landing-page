@@ -30,6 +30,13 @@ nav {
 	gap: 3rem;
 }
 
+.nav-middle ul li:hover {
+	scale: 1.05;
+	transition: all 0.3s;
+	color: #f637ec;
+	cursor: pointer;
+}
+
 .nav-right ul {
 	display: flex;
 	align-items: center;
@@ -48,6 +55,17 @@ nav {
 	position: absolute;
 	margin-left: -1rem;
 	z-index: -1;
+}
+
+.nav-right ul li:first-child:hover {
+	scale: 1.05;
+	transition: all 0.3s;
+	color: #f637ec;
+	cursor: pointer;
+}
+
+.nav-right ul li:hover {
+	cursor: pointer;
 }
 
 /* Media queries for Tablets */
@@ -275,5 +293,122 @@ span {
 	}
 	.logo-section img {
 		width: 35%;
+	}
+}
+
+/* Service Section */
+
+.service-section {
+	padding: 10rem 2rem;
+}
+
+.text-section {
+	display: flex;
+	align-items: center;
+	gap: 5rem;
+}
+
+.text-section h2 {
+	font-size: 4.5rem;
+	font-weight: 500;
+}
+
+.text-section p {
+	font-size: 1.1rem;
+	line-height: 2rem;
+	letter-spacing: 2px;
+}
+
+.card-section {
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+}
+
+.card-section div {
+	align-self: center;
+	width: 20rem;
+	height: 18rem;
+	border: 1px solid #fff;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.card-section div:hover {
+	scale: 1.05;
+	transition: all 0.7s;
+	cursor: pointer;
+}
+
+.card-section div img {
+	width: 8rem;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.first-card,
+.third-card {
+	background-color: #272727;
+	margin-top: 10rem;
+}
+
+.second-card {
+	background: linear-gradient(
+		120deg,
+		rgba(63, 59, 57, 1) 20%,
+		rgba(89, 88, 88, 1) 100%
+	);
+	margin-top: 3rem;
+}
+
+/* Media queries for Tablets */
+
+@media (max-width: 1023px) {
+	.service-section {
+		padding: 5rem 2rem;
+	}
+
+	.text-section {
+		flex-direction: column;
+	}
+
+	.card-section {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		margin: 5rem 0;
+	}
+
+	.first-card,
+	.second-card,
+	.third-card {
+		margin: 0;
+	}
+}
+
+/* Media queries for Mobiles */
+
+@media (max-width: 767px) {
+	.text-section h2 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
+
+	.text-section p {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.card-section div {
+		width: 15rem;
+		height: 13rem;
+		font-size: 1.1rem;
+	}
+
+	.card-section div img {
+		width: 5rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
 }
