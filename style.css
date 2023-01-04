@@ -74,23 +74,184 @@ nav {
 
 /* Hero Section */
 
-.hero-img {
-	display: flex;
-	justify-content: flex-end;
-	transform: translateX(15rem);
+.hero-section {
+	position: relative;
+	margin-bottom: 10rem;
 }
 
-.backcard {
+.hero-section::before {
+	content: '';
 	position: absolute;
-	right: 13rem;
-	top: -5rem;
+	width: 100%;
+	height: 100%;
 	z-index: -1;
-	width: 50%;
+	background-image: url('./assets/Photos/backCards.png'),
+		url('./assets/Photos/frontCards.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 30rem -4rem, 43rem 0;
+	transform: translateX(50px);
 }
 
-.frontcard {
-	position: absolute;
-	top: -1.5rem;
-	z-index: 1;
-	width: 60%;
+.hero-heading {
+	max-width: 70%;
+	padding: 0 2rem;
+	padding-top: 5rem;
+}
+
+.hero-heading h1 {
+	font-size: 5rem;
+	font-weight: 500;
+}
+
+span {
+	color: #f637ec;
+	font-weight: 900;
+}
+
+.hero-paragraph {
+	max-width: 45%;
+	padding: 0 2rem;
+	margin-top: 2rem;
+}
+
+.hero-paragraph p {
+	font-size: 1.1rem;
+	line-height: 2rem;
+	letter-spacing: 2px;
+}
+
+.hero-button {
+	padding: 0 2rem;
+	margin-top: 5rem;
+}
+
+.hero-button button {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.btn-img-pink {
+	width: 70px;
+	position: relative;
+	z-index: -1;
+	top: 0.5rem;
+}
+
+.hero-button button p {
+	display: inline;
+	position: relative;
+	left: -2rem;
+}
+
+.btn-img-arrow {
+	position: relative;
+	left: -1rem;
+}
+
+.hero-stats {
+	margin-top: 5rem;
+	padding: 0 2rem;
+	display: flex;
+	gap: 3rem;
+}
+
+.user-stats,
+.experience-stats {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.user-stats h2,
+.experience-stats h2 {
+	font-size: 3rem;
+}
+
+.user-stats p,
+.experience-stats p {
+	font-size: 1.1rem;
+}
+
+/* Media queries for Tablets */
+
+@media (max-width: 1023px) {
+	.hero-section {
+		margin-bottom: 5rem;
+	}
+
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-image: url('./assets/Photos/VCards.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center bottom;
+		opacity: 20%;
+	}
+
+	.hero-heading {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.hero-heading h1 {
+		font-size: 4rem;
+	}
+
+	.hero-paragraph {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.hero-button {
+		text-align: center;
+	}
+
+	.hero-stats {
+		justify-content: center;
+	}
+}
+
+/* Media queries for Mobiles */
+
+@media (max-width: 767px) {
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		width: 90%;
+		height: 90%;
+		z-index: -1;
+		background-image: url('./assets/Photos/VCards.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		opacity: 20%;
+		left: -2rem;
+	}
+
+	.hero-heading h1 {
+		font-size: 2.5rem;
+	}
+
+	.hero-stats {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.user-stats h2,
+	.experience-stats h2 {
+		font-size: 2rem;
+	}
+
+	.section-logo {
+		transform: rotate(90deg);
+	}
 }
