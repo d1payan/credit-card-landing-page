@@ -255,3 +255,25 @@ span {
 		transform: rotate(90deg);
 	}
 }
+
+/* Logo Section */
+
+.logo-section {
+	background-color: #292929;
+	padding: 5rem 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+	flex-wrap: wrap;
+}
+
+/* Media queries for Mobiles */
+
+@media (max-width: 767px) {
+	.logo-section {
+		gap: 3rem;
+	}
+	.logo-section img {
+		width: 35%;
+	}
+}
