@@ -57,15 +57,14 @@ nav {
 	z-index: -1;
 }
 
-.nav-right ul li:first-child:hover {
-	scale: 1.05;
-	transition: all 0.3s;
-	color: #f637ec;
-	cursor: pointer;
-}
-
 .nav-right ul li:hover {
 	cursor: pointer;
+	scale: 1.05;
+	transition: all 0.3s;
+}
+
+.nav-right ul li:first-child:hover {
+	color: #f637ec;
 }
 
 /* Media queries for Tablets */
@@ -152,6 +151,10 @@ span {
 	font-weight: 600;
 }
 
+.hero-button button:hover {
+	cursor: pointer;
+}
+
 .btn-img-pink {
 	width: 70px;
 	position: relative;
@@ -163,11 +166,18 @@ span {
 	display: inline;
 	position: relative;
 	left: -2rem;
+	margin-right: 0;
+	transition-property: margin-right;
+	transition-duration: 0.8s;
+}
+
+.hero-button button p:hover {
+	margin-right: 1rem;
 }
 
 .btn-img-arrow {
 	position: relative;
-	left: -1rem;
+	left: -1.5rem;
 }
 
 .hero-stats {
@@ -429,12 +439,17 @@ span {
 .card-feature .card-text {
 	margin-top: 8rem;
 	margin-bottom: 50rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .card-feature .card-text h2 {
 	color: #000000;
 	font-size: 4.5rem;
 	text-align: center;
+	width: 75%;
 }
 
 .card-feature .card-text p {
@@ -443,6 +458,7 @@ span {
 	text-align: center;
 	margin-top: 4rem;
 	font-weight: 500;
+	width: 50%;
 }
 
 .card-feature .card-img {
@@ -465,6 +481,10 @@ span {
 		margin-bottom: 30rem;
 	}
 
+	.card-feature .card-text p {
+		width: 70%;
+	}
+
 	.card-feature .card-img img {
 		top: 15rem;
 	}
@@ -475,10 +495,12 @@ span {
 @media (max-width: 767px) {
 	.card-feature .card-text h2 {
 		font-size: 2.5rem;
+		width: 90%;
 	}
 
 	.card-feature .card-text p {
 		font-size: 1rem;
+		width: 90%;
 	}
 
 	.card-feature .card-text {
