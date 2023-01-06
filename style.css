@@ -636,3 +636,85 @@ span {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
+
+/* Card Cutomization Section */
+
+.customize {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	row-gap: 4rem;
+	background: url('./assets/Photos/Diamond-right.png') no-repeat,
+		url('./assets/Photos/Diamond-left.png') no-repeat,
+		url('./assets/Photos/Rectangle-blur.png') no-repeat,
+		url('./assets/Photos/Rectangle.png') no-repeat;
+	background-size: auto, auto, cover, cover;
+	background-position: top 0 left 0, top 1.5rem right 0, 0 0, 0 0;
+	padding: 10rem 2rem;
+}
+
+.customize h2 {
+	font-size: 4.5rem;
+	width: 69%;
+}
+
+.customize h2 span {
+	color: #000000;
+}
+
+.customize button {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.customize button:hover {
+	cursor: pointer;
+}
+
+.customize button .btn-img-black {
+	width: 70px;
+	position: relative;
+	z-index: 0;
+	top: 0.5rem;
+}
+
+.customize button p {
+	display: inline;
+	position: relative;
+	left: -2rem;
+	margin-right: 0;
+	transition-property: margin-right;
+	transition-duration: 0.8s;
+}
+
+.customize button p:hover {
+	margin-right: 1rem;
+}
+
+/* Media queries for Tablets */
+
+@media (max-width: 1023px) {
+	.customize {
+		padding: 8rem 2rem;
+	}
+
+	.customize h2 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.customize {
+		padding: 5rem 2rem;
+		row-gap: 3rem;
+	}
+
+	.customize h2 {
+		font-size: 2.5rem;
+	}
+}
